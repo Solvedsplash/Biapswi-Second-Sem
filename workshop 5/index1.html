@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type ="text" id ="username" />
+    <button onclick ="username()">Search</button>
+    <ul id ="repository"></ul>
+
+    <script>
+        function username() {
+            const username = document.getElementById("username").value;
+            const url= `https://api.github.com/users/${username}/repos`;
+
+            
+            fetch(url)
+            .then((response) => response.json())
+            .then((data)=>{
+                const repolist = document.getElementById("repository");
+                repolist.innerHtml ="";
+
+                data.forEach((repo) =>{
+                    const listItem = document.createElement("li");
+                    const link = document.createElement("a");
+                    link.href = repo.html_url;
+                    link.textContent = repo.name;
+                    listItem.appendChild(link);
+                    repolist.appendChild(listItem);
+                })
+            })
+            .catch((error)=> comsole.error(error));
+        }
+    </script>
+</body>
+</html>

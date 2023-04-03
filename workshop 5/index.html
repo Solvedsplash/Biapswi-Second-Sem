@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let apiKey ="d7ece7a1";
+        async function movie(title) {
+            await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${title}`)
+            .then((res)=>res.json())
+            .then((data) =>{
+                console.log(data);
+                let info = data;
+                document.write("Title: " + info.Title);
+                document.write('<br>');
+                document.write("Year: " + info.Year);
+                document.write('<br>');
+                document.write("Director's Name: " + info.Director);
+                document.write('<br>');
+                document.write("indb Rating: " + info.imdbRating);
+                document.write('<br>');
+            });
+        }
+        movie(prompt("Enter movie name: "));
+    </script>
+</body>
+</html>

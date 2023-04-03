@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background: grey;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+    
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: aliceblue;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    
+        select option {
+            font-size: 16px;
+        }
+    
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    
+        input[type="submit"] {
+            background-color: rebeccapurple;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: black;
+        }
+    
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+    
+        @media screen and (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="Survey Form">
+        <h2>Herald College Survey Form</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Your full Name" Required>
+             
+            <label for="email">Email</label>
+            <input type="text" id ="email" email="email" placeholder="Enter your Email" Required>
+
+            <label for="age">Age</label>
+            <input type= "text" id ="age" age="age" placeholder="Enter your age" required>
+
+            <label for="major">Which option best describes you?</label>
+            <select id=" major" name="major">
+                <option value="Student">Student</option>
+                <option value="Senior Programmer">Senior Programmer</option>
+                <option value="Freelancer">Freelancer</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Junior Programmer">Junior Programmer</option>
+                <option value="SGame Developer">Game Developer</option>
+            </select>
+
+            <label for="recommend">Would you recommend Herald College Kathmandu to a friend?
+                <label for="yes">
+                    <input type= "radio" value="yes" name="choice">Yes
+                </label>
+                <label for="no">
+                    <input type= "radio" value="no" name="choice">No
+                </label>
+                <label for="Maybe">
+                    <input type= "radio" value="maybe" name="choice">Maybe
+                </label>
+            </label>
+            
+            <label for="language">Language and Frameworks known (Check all that apply)
+                <label for="c">
+                    <input type= "checkbox" name="c" value="c">C
+                </label>
+                <label for="c++">
+                    <input type= "checkbox" name="c++" value="c++">C++
+                </label>
+                <label for="c#">
+                    <input type= "checkbox" name="c#" value="c#">C#
+                </label>
+                <label for="java">
+                    <input type= "checkbox" name="java" value="java">Java
+                </label>
+                <label for="python">
+                    <input type= "checkbox" name="python" value="python">Python
+                </label>
+                <label for="javascript">
+                    <input type= "checkbox" name="javascript" value="javascript">JavaScript
+                </label>
+                <label for="react">
+                    <input type= "checkbox" name="react" value="react">React
+                </label>
+                <label for="django">
+                    <input type= "checkbox" name="c" value="c">Angular
+                </label>
+                <label for="c">
+                    <input type= "checkbox" name="django" value="django">Django
+                </label>
+                <label for="spring">
+                    <input type= "checkbox" name="spring" value="spring">Spring
+                </label>
+            </label>
+
+            <label for="comments">Any comments or suggestions</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

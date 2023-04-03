@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    margin: 0;
+    background-color: #0e0e0e;
+    }
+
+.clock-container {
+    background-color: #a7830e;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(110, 35, 35, 0.1);
+    text-align: center;
+    }
+
+#clock {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    background-color: black;
+    padding: 10px;
+    color: whitesmoke;
+    transition: color 0.5s ease-in-out;
+    }
+
+#toggle-format {
+    font-size: 1rem;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ea0c0c;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    }
+
+#toggle-format:hover {
+    background-color: #6a1172;
+    }
+</style>
+</head>
+<body>
+<div class="clock-container">
+    <span id="clock"></span>
+    <button id="toggle-format">Toggle Format</button>
+</div>
+<script src="time.js"></script>
+</body>
+</html>

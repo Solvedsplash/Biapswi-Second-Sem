@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pagani</title>
+</head>
+<body>
+    <!-- Logo -->
+	<img src="logo.jpg" alt="Logo">
+    <section id="header">
+        <div class="header container">
+            <div class="navbar">
+            <div class="car">
+                <div class="nav-list">
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="#home" data-after="Home">Home</a></li>
+                        <li><a href="#about"data-after="About">About</a></li>
+                        <li><a href="#services"data-after="Services">Service</a></li>
+                        <li><a href="#contact"data-after="Contact">Contact</a></li>
+                    </ul>
+                   <div class="secc">
+                        <form>
+                            <input type="text" placeholder="Search..." id="search-bar">
+                            <button type="submit" id="search-button"><img src="icons8-search-more-30.png" alt="Search"></button>
+                        </form>
+                   </div>
+                      
+                    <div id="search-results">
+                        <h2>Search Results:</h2>
+                        <ul id="results-list"></ul>
+                    </div>
+                      
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="home">
+        <div class="car container">
+            <div>
+                <h1>Utopia</h1>
+                <p>Pagani, <span>ACT III</span></p>
+                <p>Discover | <span>Press Release</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id ="about">
+        <div class=" about container">
+            <h2>About <span>Us</span></h2>
+            <p>Pagani is a luxury sports car manufacturer founded in 1992 by Horacio Pagani, an Argentinian-Italian engineer and designer. 
+                The company is based in Modena, Italy, and is known for its limited-edition hypercars 
+                that are renowned for their exquisite design, cutting-edge technology, and unparalleled performance.
+            </p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="services container">
+            <div class="box">
+              <h2>Our Service</h2>
+            </div>
+            <ul>
+                <li><strong>Car Reviews and Buying Guides:</strong> Our in-depth car reviews and buying guides provide all the information you need to make an informed decision when purchasing a new or used car.</li>
+                <li><strong>Maintenance and Repair Guides:</strong> We provide step-by-step guides and tutorials for common maintenance and repair tasks, so you can keep your car in top condition and save money on costly repairs.</li>
+                <li><strong>Industry News and Analysis:</strong> Stay up-to-date with the latest news and trends in the automotive industry, including new car releases, technological advancements, and industry developments.</li>
+                <li><strong>Community Forum:</strong> Join our community forum to connect with other car enthusiasts, share your experiences and knowledge, and get answers to your questions.</li>
+                <li><strong>Accessories and Upgrades:</strong> We offer a range of accessories and upgrades to enhance the performance and appearance of your car, including wheels, tires, exhaust systems, and more.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="contact container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or comments, we'd love to hear from you! Please fill out the form below or email us at <a href="https://www.pagani.com/">https://www.pagani.com/</a> and we'll get back to you as soon as possible.</p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fa fa-map-marker"></i>123 Main St, Modena, Italy</li>
+                    <li><i class="fa fa-phone"></i>+1 (555) 555-1234</li>
+                    <li><i class="fa fa-envelope"></i><a href="https://www.pagani.com/">https://www.pagani.com/</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer container">
+            <div class="brand">
+                <h1><span>Pagani</span>Automobili</h1>
+            </div>
+            <h2>Excellence in Performance and Design</h2>
+            <div class="social-icons">
+                <a href="https://twitter.com/OfficialPagani"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/paganiautomobili/?hl=en"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/user/PaganiAutomobili"><i class="fa fa-youtube"></i></a>
+            </div>
+            <ul>
+                <li><a href="#home" data-after="Home">Home</a></li>
+                <li><a href="#about" data-after="About">About</a></li>
+                <li><a href="#services" data-after="Services">Services</a></li>
+                <li><a href="#contact" data-after="Contact">Contact</a></li>
+            </ul>
+            <p>&copy; 2023 Pagani Automobili. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

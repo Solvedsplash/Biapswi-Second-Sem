@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Manipulation Example</title>
+  </head>
+  <body>
+    <h1>Array Manipulation</h1>
+
+    <form id="array-form">
+      <label for="array-input">Enter an array of numbers:</label>
+      <input type="text" id="array-input" name="array-input" value="[1, 2, 3, 4, 5]">
+      <br><br>
+
+      <label for="operation-input">Enter an operation (e.g. multiply by 2):</label>
+      <input type="text" id="operation-input" name="operation-input" value="*2">
+      <br><br>
+
+      <label for="filter-input">Enter a filter condition (e.g. greater than 5):</label>
+      <input type="text" id="filter-input" name="filter-input" value=">5">
+      <br><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+      const form = document.getElementById("array-form");
+      const resultEl = document.getElementById("result");
+      function arrayManipulation(arr, operationStr, filterStr) {
+        const operationCallback = eval(`(num) => num ${operationStr}`);
+
+        const filterCallback = eval(`(num) => num ${filterStr}`);
+
+        const resultArr = arr.map(operationCallback);
+        const filteredArr = resultArr.filter(filterCallback);
+        return filteredArr;
+      }
+      form.addEventListener("submit", (event) => {
+
+        event.preventDefault();
+        const arrInput = document.getElementById("array-input").value;
+        const operationInput = document.getElementById("operation-input").value;
+        const filterInput = document.getElementById("filter-input").value;
+
+        const arr = JSON.parse(arrInput);
+
+        const result = arrayManipulation(arr, operationInput, filterInput);
+
+        resultEl.innerText = `Result: ${result}`;
+      });
+    </script>
+  </body>
+</html>
